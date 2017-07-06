@@ -1,10 +1,270 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,">
+    <title>龙发装饰</title>
+    <link href="/stylesheets/layout.css" rel="stylesheet">
+    <script src="/javascripts/jquery.min.js"></script>
+
+</head>
+<body>
+    <!--头部开始-->
+    <!--nav-->
+    <div class="header_top">
+        <div class="inner_c">
+          <div class="header_top_left">
+              <a href="">切换城市</a>
+          </div>
+            <div class="header_top_middle">
+                <a href="">参观样板间</a>
+                  &nbsp|
+                <a href="">联系客服</a>
+            </div>
+            <div class="header_top_right">
+                <a href="javascript:;" class="icon_liangfang">免费量房</a>
+                <a href="javascript:;" class="icon_sheji">预约设计</a>
+                <a href="javascript:;" class="icon_price">整装报价</a>
+                &nbsp|
+                <a href="javascript:;" title="郑州龙发装饰">联系我们：0371-53363553</a>
+                &nbsp|
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--搜索-->
+    <div class="inner_c" style="padding-top:20px;">
+        <div class="head_logo">
+            <a>
+                <img src="/images/logo.png" alt="">
+            </a>
+        </div>
+        <div class="search">
+            <form action="http://www.longfajituan.cn/plus/search.php">
+                   <div id="x1" class="schlist">
+                       <span id="s0">看作品</span>
+                       <div id="x2" class="lanmu">
+                           <a id="s1">看作品</a>
+                           <a id="s2">找设计师</a>
+                           <a id="s3">我的小区</a>
+                           <a id="s4">装修课堂</a>
+                       </div>
+                   </div>
+                <input class="key" placeholder="网络报名立减1000元,更多详情咨询客服">
+                <input type="submit" value="搜索" class="sub">
+            </form>
+        </div>
+        <div class="topad">
+            <div id="lunbo" >
+                <ul id="ul">
+                    <li><img src="/images/20160910023805612.jpg" alt=""></li>
+                    <li><img src="/images/20160616043058690.jpg" alt=""></li>
+                    <li><img src="/images/20160910023805612.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航-->
+    <div class="tab">
+        <div class="inner_c">
+            <div class="left">
+                <ul >
+                    <li><a href="#" class="current">龙发首页</a></li>
+                    <li><a href="designer">找设计师</a></li>
+                    <li><a href="#">看作品</a></li>
+                    <li><a href="#">学装修</a></li>
+                    <li><a href="#">查优惠</a></li>
+                    <li><a href="#">我的小区</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle g">
+                            关于龙发
+                        </a>
+                        <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">龙发简介</a></li>-->
+                        <!--<li><a href="#">关于龙发</a></li>-->
+                        <!--<li><a href="#">龙发新闻</a></li>-->
+                        <!--</ul>-->
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                24小时咨询：
+                <span>0371-53363553</span>
+            </div>
+        </div>
+    </div>
     {{{body}}}
-  </body>
+    <!--页脚-->
+    <div class="footer">
+        <div class="inner_c content">
+            <ul>
+                <li>
+                    <em id="icon_foot_1"></em>
+                    <span>全负责</span>
+                    <p>环保不达标</p>
+                </li>
+                <li>
+                    <em id="icon_foot_2"></em>
+                    <span>升级免费</span>
+                    <p>产品断货</p>
+                </li>
+                <li>
+                    <em id="icon_foot_3"></em>
+                    <span>10次回访</span>
+                    <p>放心售后</p>
+                </li>
+                <li>
+                    <em id="icon_foot_4"></em>
+                    <span>全国统一售后</span>
+                    <p>龙发集团</p>
+                </li>
+                <li>
+                    <em id="icon_foot_5"></em>
+                    <span>全负责</span>
+                    <p>环保不达标</p>
+                </li>
+            </ul>
+        </div>
+        <div class="main_wrap">
+            <div class="foot_nav FloatLeft">
+                <dl>
+                    <dt>
+                        <a href="#">了解龙发</a>
+                    </dt>
+                    <dd>
+                        <a href="#">龙发简介</a>
+                    </dd>
+                    <dd>
+                        <a href="#">联系龙发</a>
+                    </dd>
+                    <dd>
+                        <a href="#">龙发新闻</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#">学装修</a>
+                    </dt>
+                    <dd>
+                        <a href="#">收房</a>
+                    </dd>
+                    <dd>
+                        <a href="#">设计</a>
+                    </dd>
+                    <dd>
+                        <a href="#">预算</a>
+                    </dd>
+                    <dd>
+                        <a href="#">水电</a>
+                    </dd>
+                    <dd>
+                        <a href="#">防水</a>
+                    </dd>
+                    <dd>
+                        <a href="#">泥瓦</a>
+                    </dd>
+                    <dd>
+                        <a href="#">木工</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#">装修风格</a>
+                    </dt>
+                    <dd>
+                        <a href="#">简约风格</a>
+                    </dd>
+                    <dd>
+                        <a href="#">欧式风格</a>
+                    </dd>
+                    <dd>
+                        <a href="#">中式风格</a>
+                    </dd>
+                    <dd>
+                        <a href="#">新古典风格</a>
+                    </dd>
+                    <dd>
+                        <a href="#">混搭风格</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="foot_wx FloatLeft">
+            </div>
+            <div class="FloatRight foot_contact">
+                <p>24小时咨询热线</p>
+                <h5>0371-53363553</h5>
+                <p>(服务时间：周一至周日)</p>
+                <a href="">在线咨询</a>
+            </div>
+        </div>
+    </div>
+    <!--最底部页脚-->
+    <div class="footer2">
+        <div><b>友情链接</b>
+            <a href="http://www.longfajituan.cn" title="郑州龙发装饰">郑州龙发装饰</a>
+            <a href="http://www.hnhsmj.com/" title="郑州龙发装饰">郑州装修公司</a>
+            <a href="http://www.longfahb.com/" title="石家庄龙发装饰公司">石家庄龙发装饰公司</a>
+            <a href="http://www.longfaluoyang.com/"  title="洛阳龙发装饰">洛阳龙发装饰</a>
+            <a href="http://www.chaofangroup.com/"  title="河南超凡装饰">河南超凡装饰</a>
+            <a href="http://www.zzlohas.com/"  title="郑州乐豪斯装饰">郑州乐豪斯装饰</a>
+        </div>
+        <p>
+            <a href=''>设计精英</a>
+            |
+            <a href='' >看案例</a>
+            |
+
+            <a href=''>学装修</a>
+            |
+            <a href='' >查优惠</a>
+            |
+            <a href='' >我的小区</a>
+            |
+            <a href=''>了解龙发</a>
+            |
+            <a href='' >提交留言</a>
+            |
+            <a href='' >样板间</a>
+            |
+
+        </p>
+        <p>龙发装饰集团　　<span>  1997-2016</span>　<a href=""><span>北京龙发建筑装饰工程有限公司</span></a>　</p>
+        <p>龙发装饰24小时服务热线：<b>0371-53363553</b></p>
+     </div>
+    <script>
+        var scroll = document.getElementById('lunbo')
+        var ul = document.getElementById('ul');
+        var timer = null;
+        var num = 0;
+        timer = setInterval(function(){
+            num--;
+            num = num <= -320? 0:num
+            ul.style.left = num + 'px';
+
+
+        },50)
+        scroll.onmouseover = function(){
+            clearInterval(timer)
+        }
+        scroll.onmouseout = function(){
+            timer = setInterval(function(){
+                num--;
+                num = num <= -320? 0:num
+                ul.style.left = num + 'px';
+
+
+            },50)
+        }
+        var spans = $('.search .schlist .lanmu a');
+        console.log(spans)
+        for(var i = 0;i< spans.length;i++){
+            spans[i].onclick = function(){
+                var key = this.innerHTML;
+                $('.search .schlist span').get(0).innerHTML = key;
+            }
+
+        }
+    </script>
+</body>
 </html>

@@ -1,0 +1,447 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header_top {
+    margin: 0px auto;
+    height: 38px;
+    width: 100%;
+    line-height: 25px;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+}
+.inner_c{
+    margin: 0px auto;
+    width: 1220px;
+    height: 100%;
+    /*border:1px solid blue;*/
+    display: table;
+}
+.clear{
+    clear: both;
+}
+.header_top_left {
+    padding-top: 5px;
+    width: 87px;
+    text-align: center;
+    border: solid #f7f7f7;
+    border-width: 1px 1px 1px;
+    position: relative;
+    line-height: 29px;
+    float: left;
+    z-index: 102;
+}
+.header_top_left a{
+    padding-left: 15px;
+    width: 50px;
+    height: 28px;
+    color: #00af63 !important;
+    text-decoration: none;
+    background: url(/images/icon_phone2.png) no-repeat 0px 5px;
+    display: block;
+}
+.header_top_middle{
+    padding-top: 6px;
+    padding-left: 10px;
+    color: #ddd;
+    text-align: right;
+    float: left;
+}
+.header_top_m a {
+    padding: 0px 10px;
+}
+.header_top_right{
+    padding-top: 5px;
+    width: 800px;
+    color: #ddd;
+    text-align: right;
+    float: right;
+}
+
+a.icon_liangfang {
+    padding-left: 15px;
+    width: 50px;
+    height: 23px;
+    line-height: 23px;
+    background: url(/images/icon_liangfang.png) no-repeat 0px 0px;
+    display: inline-block;
+}
+a.icon_sheji {
+    padding-left: 22px;
+    width: 50px;
+    height: 23px;
+    line-height: 23px;
+    background: url(/images/icon_sheji.png) no-repeat 0px 3px;
+    display: inline-block;
+}
+a.icon_price {
+    padding-left: 15px;
+    width: 50px;
+    height: 23px;
+    line-height: 23px;
+    background: url(/images/icon_price.png) no-repeat 0px 3px;
+    display: inline-block;
+}
+.head_top_right a {
+    margin: 0px 8px;
+    color: #999;
+}
+.header_top a{
+    color: #666;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.header_top a:hover{
+    text-decoration: underline;
+}
+/*******************************************/
+.head_logo{
+    float: left;
+}
+.search {
+    margin-top: 15px;
+    margin-left: 100px;
+    width: 480px;
+    font-family: 宋体;
+    float: left;
+    position: relative;
+    z-index: 999;
+}
+.schlist {
+    display: inline-block;
+    padding: 0px;
+    width: 90px;
+    height: 40px;
+    line-height: 38px;
+    border: 1px solid #D20001;
+    border-right: none;
+    position: relative;
+    float: left;
+    background: url(/images/icon_header2.png) no-repeat 80px -126px;
+    z-index: 9;
+}
+.schlist:hover .lanmu{
+    display: block;
+}
+.schlist:hover{
+    background-position: 80px -102px;
+}
+.schlist span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+}
+.lanmu {
+    display: none;
+    width: 91px;
+    text-align: left;
+    text-indent: 8px;
+    border: #D20001 1px solid;
+    border-top: none;
+    top: 38px;
+    left: -1px;
+    position: absolute;
+    z-index: 9;
+}
+.lanmu a {
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    font-size: 12px;
+    background: #FFF;
+    display: block;
+}
+.lanmu a:hover{
+    background-color:#f9f9f9;
+    color: red;
+    text-decoration: underline;
+}
+.key {
+    padding-left: 10px!important;
+    width: 300px;
+    height: 40px;
+    line-height: 32px!important;
+    font-size: 14px;
+    color: #aaa;
+    border: 1px solid #D20001;
+    border-left: none;
+}
+.search input {
+    float: left;
+}
+.sub {
+    width: 70px;
+    height: 42px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    background: #D20001;
+    border: none;
+    border-radius: 0 2px 2px 0;
+}
+.topad{
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 67px;
+    margin-left: 170px;
+    border:5px solid #f5f5f5;
+}
+.topad #lunbo{
+    position: relative;
+    width: 160px;
+    height: 67px;
+    overflow: hidden;
+}
+.topad #lunbo ul{
+    position: relative;
+    width: 480px;
+    list-style: none;
+}
+.topad ul li{
+    float: left;
+}
+/*切换导航**********************************/
+div.tab{
+    margin: 20px 0 auto;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color:#D20001;
+}
+div.tab ul{
+    list-style: none;
+    height: 40px;
+}
+div.tab li{
+    float: left;
+    margin-left: 10px;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+}
+div.tab li a{
+    display: block;
+    width: 120px;
+    height: 40px;
+}
+div.tab li a{
+    color: white;
+}
+div.tab li:hover{
+    background-color: #ad0101 !important;
+}
+div.tab li a.current{
+    background-color: #ad0101;
+}
+div.tab .left{
+    float: left;
+}
+div.tab .right{
+    padding-left: 35px;
+    color: #fff;
+    font-size: 16px;
+    background: url(/images/icon_tel.png) no-repeat 0px 5px;
+    float: right;
+}
+
+    /******************************************页脚*/
+.footer{
+    background-color: #f8f8f8;
+}
+.content{
+    background-color: #gray;
+}
+.content ul{
+    list-style: none;
+}
+.content ul li{
+    float: left;
+    width: 220px;
+    height: 114px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 60px;
+    margin-left: 20px;
+}
+.content ul li em{
+    margin: 0px auto;
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+#icon_foot_1{
+    background: url(/images/icon_foot.png);
+    background-position: 0px 0px;
+}
+.content ul li:hover #icon_foot_1 {
+    background-position: 0px -45px;
+}
+#icon_foot_2{
+    background: url(/images/icon_foot.png);
+    background-position: -45px 0px;
+}
+.content ul li:hover #icon_foot_2 {
+    background-position: -45px -45px;
+}
+#icon_foot_3{
+    background: url(/images/icon_foot.png);
+    background-position: -90px 0px;
+}
+.content ul li:hover #icon_foot_3{
+    background-position: -90px -45px;
+}
+#icon_foot_4{
+    background: url(/images/icon_foot.png);
+    background-position: -135px 0px;
+}
+.content ul li:hover #icon_foot_4{
+    background-position: -135px -45px;
+}
+#icon_foot_5{
+    background: url(/images/icon_foot.png);
+    background-position: -180px 0px;
+}
+.content ul li:hover #icon_foot_5{
+    background-position: -180px -46px;
+}
+
+.content ul li span {
+    padding: 15px 0px 10px;
+    color: #333;
+    font-size: 20px;
+    display: block;
+}
+.main_wrap {
+    margin: 30px auto;
+    width: 1200px;
+    display: table;
+}
+.foot_nav {
+    width: 540px;
+}
+.FloatLeft {
+    FLOAT: left;
+
+}
+.footer{
+    padding-bottom:40px;
+}
+.foot_wx{
+    padding:0px 50px;
+    width: 300px;
+    height: 200px;
+    border-left:1px solid #d5d5d5;
+    border-right:1px solid #d5d5d5;
+    background:url(/images/ewm_1.jpg) no-repeat;
+    background-position: center;
+}
+.foot_nav dl {
+    margin-right: 80px;
+    width: 100px;
+    float: left;
+}
+.foot_nav dt {
+    margin-bottom: 10px;
+    display: block;
+}
+.foot_nav dt a {
+    font-size: 18px;
+    color: #999;
+}
+.foot_nav dd a{
+    font-size: 15px;
+    color: #999;
+}
+.foot_contact {
+    margin: 0px;
+    padding-bottom: 20px;
+    width: 240px;
+    font-family: 宋体;
+    font-size: 12px;
+}
+.FloatRight {
+    FLOAT: right;
+}
+.foot_contact p {
+    padding-top: 10px;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: center;
+}
+.foot_contact h5 {
+    margin: 15px 0px;
+    color: #f5342f;
+    font-family: "microsoft yahei";
+    font-size: 22px;
+    text-align: center;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+.foot_contact a {
+    margin: 20px auto 0px;
+    padding: 8px;
+    width: 160px;
+    text-align: center;
+    font-size: 16px;
+    color: #f5342f;
+    background: #fff;
+    border: 1px solid #f5342f;
+    display: block;
+}
+.footer2 {
+    margin: 0 auto;
+    padding: 20px 0px;
+    width: 100%;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #eee;
+    text-align: center;
+    background: #1c1c1c;
+}
+.footer2 div {
+    margin: 15px;
+}
+.footer2 div a {
+    padding: 0 8px;
+    color: #ddd;
+}
+.footer2 p {
+    line-height: 28px;
+    color: #666666;
+}
+.footer2 p span {
+    font-family: "arial";
+}
+.footer2 p {
+    line-height: 28px;
+    color: #666666;
+}
+.footer2  a:hover{
+    text-decoration: underline;
+}
+.footer2 div a {
+    padding: 0 8px;
+    color: #ddd;
+}
+strong, b {
+    font-weight: bold;
+}
+.footer2 p a{
+    padding-left: 10px;
+}
+.footer2 p b {
+    color: #f5342f;
+    font-family: "arial";
+    font-size: 16px;
+    font-weight: normal;
+}

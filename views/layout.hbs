@@ -73,11 +73,11 @@
                     <li><a href="#" class="current">龙发首页</a></li>
                     <li><a href="designer">找设计师</a></li>
                     <li><a href="#">看作品</a></li>
-                    <li><a href="#">学装修</a></li>
+                    <li><a href="decorate">学装修</a></li>
                     <li><a href="#">查优惠</a></li>
                     <li><a href="#">我的小区</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle g">
+                        <a class="dropdown-toggle g" href="about">
                             关于龙发
                         </a>
                         <!--<ul class="dropdown-menu">-->
@@ -239,7 +239,7 @@
         var num = 0;
         timer = setInterval(function(){
             num--;
-            num = num <= -320? 0:num
+            num = num <= -320? 0:num;
             ul.style.left = num + 'px';
 
 
@@ -257,7 +257,7 @@
             },50)
         }
         var spans = $('.search .schlist .lanmu a');
-        console.log(spans)
+//        console.log(spans);
         for(var i = 0;i< spans.length;i++){
             spans[i].onclick = function(){
                 var key = this.innerHTML;

@@ -1,0 +1,176 @@
+<link rel="stylesheet" href="../stylesheets/decorate.css">
+
+<img src="../images/20160308043809299.jpg" width="1903px">
+<div class="box">
+    <div class="CEN">
+        <div class="CIGL">
+            <img src="../images/zx_1.jpg" alt="">
+            <ul>
+                <li><a><span></span>收房</a></li>
+                <li><a><span></span>设计</a></li>
+                <li><a><span></span>预算</a></li>
+                <li><a><span></span>合同</a></li>
+            </ul>
+        </div>
+        <div class="CIGC">
+            <img src="../images/zx_2.jpg" alt="">
+            <ul>
+                <li><a><span></span>拆改</a></li>
+                <li><a><span></span>水电</a></li>
+                <li><a><span></span>防水</a></li>
+                <li><a><span></span>泥瓦</a></li>
+                <li><a><span></span>木工</a></li>
+                <li><a><span></span>油漆</a></li>
+                <li><a><span></span>竣工</a></li>
+                <li><a><span></span>其他</a></li>
+            </ul>
+        </div>
+        <div class="CIGR">
+            <img src="../images/zx_3.jpg" alt="">
+            <ul>
+                <li><a><span></span>软装</a></li>
+                <li><a><span></span>入住</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="TWO">
+        <ul>
+            <li><img src="../images/xzx_ad1.jpg" alt=""></li>
+            <li><img src="../images/xzx_ad2.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div class="ZXGL">
+        <div class="ZXGLT">
+            <p>最新攻略</p>
+        </div>
+        <div class="tem">
+            <ul class="BOX" id="BOX">
+
+            </ul>
+        </div>
+        <script type="text/template" id="template">
+            <li>
+                <img src="<%=url%>" alt="">
+                <div class="BOXT">
+                    <a><%=title%></a>
+                    <p class="BOXX"><%=fare%></p>
+                    <p class="BOXB"><%=des%></p>
+                </div>
+            </li>
+        </script>
+    </div>
+    <script src="../javascripts/underscore-min.js"></script>
+    <script>
+        var box = $('#BOX');
+        var templateStr = $('#template').html();
+
+        var compile = _.template(templateStr);
+        console.log(compile);
+        $.get('/de',function(data){
+            console.log(data)
+            if(data.success){
+//                console.log('123');
+                for (var i = 0; i < data.data.length; i++) {
+                    var dictionary = data.data[i];
+//                    console.log(dictionary);
+                    var str1 = compile(dictionary);
+                    box.append(str1);
+                }
+            }
+        })
+    </script>
+    <div class="RIT">
+        <div class="RITT">
+            <p><span>装修问答</span><a>更多>></a></p>
+        </div>
+        <div class="RITC">
+            <a href="">燥上火怎么办 支招秋季家装四</a>
+            <p>秋季，是人们进补养生的好季节，除了人的身体，家居也是分外娇弱，亟待呵护调理。龙发装饰小编提醒正在装修或是已经装修完好的业主，此时一定要注重细节措施，</p>
+        </div>
+        <div class="RITB">
+            <ul>
+                <li><span></span><a href="">龙发装饰分享豪宅中式书房设</a></li>
+                <li><span></span><a href="">龙发装饰官网分享不同空间家</a></li>
+                <li><span></span><a href="">郑州装饰公司告诉大家实木楼</a></li>
+                <li><span></span><a href="">郑州装修公司分享浅色家居装</a></li>
+                <li><span></span><a href="">郑州龙发装饰关于装修环保的</a></li>
+                <li><span></span><a href="">龙发装饰公司分享家居装修应</a></li>
+                <li><span></span><a href="">郑州龙发装饰分享家装色彩搭</a></li>
+                <li><span></span><a href="">龙发装饰分享开放式厨房装修</a></li>
+                <li><span></span><a href="">郑州装饰公司分享如何用色彩</a></li>
+            </ul>
+        </div>
+        <div class="MFL">
+            <img src="/images/lanmuyeguanggao.jpg" alt="">
+        </div>
+        <div class="change">
+            <div class="top" id="btn">
+                <button class="current">龙发旗舰店<tton>
+                    <button class="current">龙发旗舰店<tton>
+            </div>
+            <div id="divs" class="bottom">
+                <div class="show">
+                    <img src="/images/hankou.jpg" width="242px" height="151px">
+                    <p>嵩山路</p>
+                </div>
+                <div class="hide">
+                    <img src="/images/wuchang.jpg">
+                    <p>未来路</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.onload = function(){
+                //拿到所有的按钮
+                var btns = document.getElementById("btn").getElementsByTagName('button');
+                var divs = document.getElementById("divs").getElementsByTagName('div');
+                for(var i = 0;i < btns.length;i++){
+//                divs[i].style.color = "red";
+                    btns[i].wb = i;
+                    btns[i].onclick = function(){
+                        //在事件里面不能使用i但是可以使用当前被点击按钮的自定义属性wb
+                        //排他思想
+                        for(var j = 0;j < btns.length;j++){
+                            btns[j].className = "";
+                            divs[j].className = "";
+                            btns[j].style.color = "";
+                            btns[j].style.backgroundColor = "";
+                            btns[j].style.borderTop="";
+                        }
+                        btns[this.wb].style.color = "red";
+                        btns[this.wb].style.backgroundColor = "white";
+                        divs[this.wb].className = "show";
+                        btns[this.wb].style.borderTop= "2px solid red";
+                    }
+                }
+            }
+
+        </script>
+        <div class="PHNE">
+            <p>电话：<b>0371-53363553</b></p>
+            <input type="button" value="发送地址至本机">
+        </div>
+        <div class="TOP">
+            <p><span></span>算算你家装修多少钱？</p>
+            <div class="TOPF">
+                <form>
+                    <select ng-model="product.city" ng-options="city.value as city.key for city in cities">
+                        <option value="">家居户型</option>
+                        <option value="">两室两厅一卫一厨</option>
+                        <option value="">两室两厅二卫一厨</option>
+                        <option value="">三室两厅一卫一厨</option>
+                        <option value="">三室两厅二卫一厨</option>
+                        <option value="">四室两厅一卫一厨</option>
+                        <option value="">四室两厅二卫一厨</option>
+                    </select>
+                    <input type="text" placeholder="居住小区">
+                    <input type="text" placeholder="使用面积">
+                    <p>平米</p>
+                    <input type="text" placeholder="您的称呼">
+                    <input type="text" placeholder="联系电话"><br>
+                    <input type="button" class="MS" value="马上报价">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

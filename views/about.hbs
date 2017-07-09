@@ -1,0 +1,171 @@
+<link rel="stylesheet" href="../stylesheets/about.css">
+<div class="box">
+    <div class="HT">
+       <ul>
+           <li><img src="/images/Icon3.gif" alt=""></li>
+           <li><a href="">主页</a></li>
+           <li>></li>
+           <li><a href="">了解龙发</a></li>
+           <li>>></li>
+       </ul>
+
+    </div>
+    <div class="GSJJ">
+        <span class="RE"></span>
+        <b>公司简介</b>
+    </div>
+    <div class="jianjie">
+        <p>
+            北京龙发建筑装饰工程有限公司二七分公司简称龙发装饰，发力求通过家居研究及提供装饰装修服务改善家居环境，通过融合经典与潮流家居艺术开阔人们的家居。
+        </p>
+        <img src="/images/jianjie.jpg" alt="">
+    </div>
+    <div class="GSJJ">
+        <span class="RE"></span>
+        <b>优秀团队</b>
+    </div>
+    <div class="EXCE">
+        <p>龙发装饰创立于1997年</p>
+        <ul>
+            <li>目前在中国拥有70多家分公司，600多家店面。</li>
+            <li>集装饰设计、公共工程、环境艺术、集成家居服务于一体。</li>
+            <li>主要项目涉及家庭装修、精装住宅、商务办公、商业空间等领域。</li>
+        </ul>
+    </div>
+    <div class="GSJJ">
+        <span class="RE"></span>
+        <b>龙发荣誉</b>
+    </div>
+    <div class="rolling" id="rolling">
+        <div class="m_unit" id="m_unit">
+            <ul>
+                <li>
+                    <a href=""><img src="/images/007.jpg" alt=""></a>
+                    <p>龙发装饰企业荣誉</p>
+                </li>
+                <li>
+                    <a href=""><img src="/images/008.jpg" alt=""></a>
+                    <p>龙发装饰企业荣誉</p>
+                </li>
+                <li>
+                    <a href=""><img src="/images/009.jpg" alt=""></a>
+                    <p>龙发装饰企业荣誉</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../javascripts/rolling.js"></script>
+    <div class="RIG">
+        <div class="GYL">
+            <img src="/images/logo2.png" alt="">
+            <span>关于龙发</span>
+        </div>
+        <div class="GLX">
+            <ul>
+                <li>
+                    <img src="/images/icon22.png">
+                    <a href="">龙发简介</a>
+                </li>
+                <li>
+                    <img src="/images/icon22.png">
+                    <a href="">联系龙发</a>
+                </li>
+                <li>
+                    <img src="/images/icon22.png">
+                    <a href="">龙发新闻</a>
+                </li>
+            </ul>
+        </div>
+        <div class="MFL">
+            <img src="/images/lanmuyeguanggao.jpg" alt="">
+        </div>
+        <div class="change">
+            <div class="top" id="btn">
+                <button class="current">龙发旗舰店<tton>
+                    <button class="current">龙发旗舰店<tton>
+            </div>
+            <div id="divs" class="bottom">
+                <div class="show">
+                    <img src="/images/hankou.jpg" width="242px" height="151px">
+                    <p>嵩山路</p>
+                </div>
+                <div class="hide">
+                    <img src="/images/wuchang.jpg">
+                    <p>未来路</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.onload = function(){
+                //拿到所有的按钮
+                var btns = document.getElementById("btn").getElementsByTagName('button');
+                var divs = document.getElementById("divs").getElementsByTagName('div');
+                for(var i = 0;i < btns.length;i++){
+//                divs[i].style.color = "red";
+                    btns[i].wb = i;
+                    btns[i].onclick = function(){
+                        //在事件里面不能使用i但是可以使用当前被点击按钮的自定义属性wb
+                        //排他思想
+                        for(var j = 0;j < btns.length;j++){
+                            btns[j].className = "";
+                            divs[j].className = "";
+                            btns[j].style.color = "";
+                            btns[j].style.backgroundColor = "";
+                            btns[j].style.borderTop="";
+                        }
+                        btns[this.wb].style.color = "red";
+                        btns[this.wb].style.backgroundColor = "white";
+                        divs[this.wb].className = "show";
+                        btns[this.wb].style.borderTop= "2px solid red";
+                    }
+                }
+            }
+
+        </script>
+        <div class="PHNE">
+            <p>电话：<b>0371-53363553</b></p>
+            <input type="button" value="发送地址至本机">
+        </div>
+        <div class="TOP">
+            <p><span></span>算算你家装修多少钱？</p>
+            <div class="TOPF">
+                <form>
+                    <select ng-model="product.city" ng-options="city.value as city.key for city in cities">
+                        <option value="">家居户型</option>
+                        <option value="">两室两厅一卫一厨</option>
+                        <option value="">两室两厅二卫一厨</option>
+                        <option value="">三室两厅一卫一厨</option>
+                        <option value="">三室两厅二卫一厨</option>
+                        <option value="">四室两厅一卫一厨</option>
+                        <option value="">四室两厅二卫一厨</option>
+                    </select>
+                    <input type="text" placeholder="居住小区">
+                    <input type="text" placeholder="使用面积">
+                    <p>平米</p>
+                    <input type="text" placeholder="您的称呼">
+                    <input type="text" placeholder="联系电话"><br>
+                    <input type="button" class="MS" value="马上报价">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--<div class="TOPFF">
+        <form class="FF">
+            <select>
+                <option value="">家居户型</option>
+                <option value="">两室两厅一卫一厨</option>
+                <option value="">两室两厅二卫一厨</option>
+                <option value="">三室两厅一卫一厨</option>
+                <option value="">三室两厅二卫一厨</option>
+                <option value="">四室两厅一卫一厨</option>
+                <option value="">四室两厅二卫一厨</option>
+            </select>
+            <input type="text" placeholder="居住小区">
+            <input type="text" placeholder="使用面积">
+            <p>平米</p>
+            <input type="text" placeholder="您的称呼">
+            <input type="text" placeholder="联系电话"><br>
+            <input type="button" class="MS" value="马上报价">
+        </form>
+    </div>-->
+</div>

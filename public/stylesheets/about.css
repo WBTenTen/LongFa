@@ -1,0 +1,306 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: 宋体;
+}
+ul{
+    list-style-type:none;
+}
+.box{
+    width: 1205px;
+    height: 1400px;
+    /*border:1px solid blue;*/
+    margin:5px auto;
+    position: relative;
+}
+.box .HT{
+    width: 878px;
+    height: 50px;
+    border-bottom:1px solid #dddddd;
+    line-height: 50px;
+}
+.box .HT ul li{
+    float: left;
+    padding-left:7px;
+    font-size: 13px;
+}
+.box .HT ul li a:hover{
+    text-decoration: underline;
+}
+.box .GSJJ{
+    width: 870px;
+    height: 53px;
+    background-color: #eeeeee;
+    margin-top:30px;
+    float: left;
+}
+.box .GSJJ .RE{
+    display: block;
+    height: 53px;
+    width: 3px;
+    background-color: #b20000;
+    float: left;
+}
+.box .GSJJ b{
+    float: left;
+    font-size: 25px;
+    font-weight:bold;
+    line-height: 53px;
+    margin-left:20px;
+}
+.box .jianjie{
+    width: 878px;
+    height: 550px;
+    float: left;
+    margin-top:15px;
+}
+.box .jianjie p{
+   font-size: 15px;
+    margin-left:25px;
+    margin-top: 15px;
+    line-height:30px;
+    font-family: 宋体;
+}
+.box .jianjie img{
+    margin-left:50px;
+    margin-top:15px;
+}
+
+.box .EXCE{
+    width: 878px;
+    height: 130px;
+    /*border:1px solid red;*/
+    float: left;
+    margin-top:20px;
+}
+.box .EXCE p{
+    margin-top:10px;
+    text-indent: 2em;
+    font-size: 15px;
+}
+.box .EXCE ul li{
+    text-indent:2em;
+    margin-top:5px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.box .rolling{
+    width: 878px;
+    height: 400px;
+    /*border:1px solid red;*/
+    float: left;
+    margin-top:20px;
+    position: relative;
+    overflow: hidden;
+}
+.box .rolling .m_unit{
+    width: 5000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.box .rolling .m_unit ul li{
+    float: left;
+    margin-right:10px;
+    margin-top:10px;
+    /*background: url("../images/");*/
+}
+.box .rolling .m_unit ul li p{
+    text-align: center;
+    font-size: 15px;
+}
+
+.box .RIG{
+    width: 300px;
+    height: 670px;
+    /*border:1px solid red;*/
+    position: absolute;
+    top:20px;
+    right: 3px;
+}
+.box .RIG .GYL{
+    height: 60px;
+    width: 300px;
+    background-color: #d20001;
+    border:1px solid #dddddd;
+}
+.box .RIG .GYL img{
+    position: absolute;
+    top:15px;
+    right: 10px;
+}
+.box .RIG .GYL span{
+    font-size: 30px;
+    color:#dddddd;
+    line-height: 60px;
+    font-weight: bold;
+    margin-left:10px;
+}
+.box .RIG .GLX{
+    width: 300px;
+    height: 120px;
+    border-top:0px;
+    border-left:1px solid #dddddd;
+    border-right:1px solid #dddddd;
+}
+.box .RIG .GLX ul li{
+    height: 40px;
+    line-height: 40px;
+    margin-left:10px;
+    border-bottom:1px solid #eeeeee;
+    font-family: 微软雅黑;
+}
+.box .RIG .GLX ul li:nth-child(1) a{
+    color: red;
+}
+.box .RIG .GLX ul li a{
+    margin-left:10px;
+}
+.box .RIG .GLX ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.box .RIG .MFL{
+    height: 120px;
+    margin-top: 15px;
+}
+.box .RIG .change{
+    width: 300px;
+    border:1px solid #d9d9d9;
+    border-bottom:0;
+    height:230px;
+    margin-top:20px;
+}
+.box .RIG .change .top button{
+    /*display: block;*/
+    width: 147px;
+    height: 40px;
+    /*border:1px solid #f2f2f2;*/
+    border:0;
+    outline: none;
+    font-size: 15px;
+    margin-left:2px;
+    background-color: #f2f2f2;
+}
+.box .RIG .change .bottom div{
+    width:100%;
+    height:150px;
+    display: none;
+}
+.box .RIG .change .bottom .show{
+    display: block;
+}
+.box .RIG .change .bottom img{
+    margin-top:13px;
+    margin-left:25px;
+}
+.box .RIG .change .bottom p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.box .RIG .PHNE{
+    width: 300px;
+    height: 90px;
+    border:1px solid #dddddd;
+    border-top:0px;
+    text-align: center;
+}
+.box .RIG .PHNE p,.box .RIG .PHNE input{
+    margin-top:10px;
+}
+.box .RIG .PHNE p b{
+    color: red;
+}
+.box .RIG .PHNE input{
+    width: 230px;
+    height: 40px;
+    background-color: #59db9a;
+    border:0;
+    outline:none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.box .RIG .PHNE input:hover{
+    background-color: #05a354;
+    cursor: pointer;
+}
+.box .RIG .TOP{
+    width: 300px;
+    height: 350px;
+    border:1px solid #dddddd;
+    border-top:2px solid red;
+    margin-top:20px;
+    position: relative;
+}
+.box .RIG .TOP p{
+    margin-top:15px;
+    margin-left:30px;
+    line-height:25px;
+    font-size: 16px;
+}
+.box .RIG .TOP p span{
+    display: block;
+    width: 19px;
+    height: 25px;
+    margin-right:10px;
+    background: url("../images/icon_jsq.png");
+    float: left;
+}
+.box .RIG .TOP .TOPF form select,.box .RIG .TOP .TOPF input{
+    width: 250px;
+    height: 33px;
+    margin-top:13px;
+    margin-left:15px;
+    font-size:15px;
+    text-indent: 1em;
+}
+.box .RIG .TOP .TOPF form select{
+    outline:0;
+}
+.box .RIG .TOP .TOPF form p{
+    position: absolute;
+    top:139px;
+    right: 60px;
+    font-size: 10px;
+}
+.box .RIG .TOP .TOPF form input.MS{
+    border:0;
+    background-color: #ff5050;
+    color: white;
+    width: 255px;
+    outline:0;
+}
+.box .RIG .TOP .TOPF form input:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+
+
+.box .TOPFF{
+    width: 300px;
+    height: 350px;
+    border:1px solid red;
+    z-index: 999;
+    position: relative;
+    /*top:50%;*/
+}
+.box .TOPFF form.FF select,.box .TOPFF input{
+    width: 250px;
+    height: 33px;
+    margin-top:13px;
+    margin-left:15px;
+    font-size:15px;
+    text-indent: 1em;
+}
+.box .TOPFF form.FF p{
+    font-size: 10px;
+}
+.box .TOPFF form.FF input.MS{
+    border:0;
+    background-color: #ff5050;
+    color: white;
+    width: 255px;
+    outline:0;
+}
+

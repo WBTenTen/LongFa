@@ -1,0 +1,196 @@
+<script src="./javascripts/underscore-min.js"></script>
+<script src="./javascripts/jquery-1.12.3.min.js"></script>
+<link rel="stylesheet" href="./stylesheets/reset.css">
+<link rel="stylesheet" href="./stylesheets/plot.css">
+
+
+<img id="Tu" class="Tu" src="./images/banner_xq.jpg" alt="">
+<nav>
+	<div class="nav_left"></div>
+	<div class="nav_right">
+		<h1>预约参观样板间</h1>
+        <span>平米</span>
+        <input class="nav_right_input nav_right_input1" type="text" value="您的称呼">
+        <input class="nav_right_input nav_right_input2" type="text" value="居住小区">
+        <input class="nav_right_input nav_right_input3" type="text" value="使用面积">
+        <input class="nav_right_input nav_right_input4" type="text" value="联系电话">
+        <input type="submit" value="马上预约">
+        <input class="nav_right_input nav_right_input5" type="text" value="查找我的小区"><input type="submit" value="查找">
+	</div>
+</nav>
+<section>
+    <div class="box">
+        <div class="section_title">
+            <span>区域：</span>
+
+            <span><a href="">中原区</a></span>
+            <span class="shu">|</span>
+            <span><a href="">金水区</a></span>
+            <span class="shu">|</span>
+            <span><a href="">惠济区</a></span>
+            <span class="shu">|</span>
+            <span><a href="">管城区</a></span>
+            <span class="shu">|</span>
+            <span><a href="">高新区</a></span>
+            <span class="shu">|</span>
+            <span><a href="">东区</a></span>
+        </div>
+        <div class="case" id="case">
+			<ul class="case_moban" id="case_moban">
+
+			</ul>
+        </div>
+		
+	 	<div class="RIG">
+	        <div class="GYL">
+	            <img src="/images/logo2.png" alt="">
+	            <span>关于龙发</span>
+	        </div>
+	        <div class="GLX">
+	            <ul>
+	                <li>
+	                    <img src="/images/icon22.png">
+	                    <a href="">龙发简介</a>
+	                </li>
+	                <li>
+	                    <img src="/images/icon22.png">
+	                    <a href="">联系龙发</a>
+	                </li>
+	                <li>
+	                    <img src="/images/icon22.png">
+	                    <a href="">龙发新闻</a>
+	                </li>
+	            </ul>
+	        </div>
+	        <div class="MFL">
+	            <img src="/images/lanmuyeguanggao.jpg" alt="">
+	        </div>
+	        <div class="change">
+	            <div class="top" id="btn">
+	                <button class="current">龙发旗舰店<tton>
+	                    <button class="current">龙发旗舰店<tton>
+	            </div>
+	            <div id="divs" class="bottom">
+	                <div class="show">
+	                    <img src="/images/hankou.jpg" width="242px" height="151px">
+	                    <p>嵩山路</p>
+	                </div>
+	                <div class="hide">
+	                    <img src="/images/wuchang.jpg">
+	                    <p>未来路</p>
+	                </div>
+	            </div>
+	        </div>
+	    
+	        <div class="PHNE">
+	            <p>电话：<b>0371-53363553</b></p>
+	            <input type="button" value="发送地址至本机">
+	        </div>
+	        <div class="TOP">
+	            <p><span></span>算算你家装修多少钱？</p>
+	            <div class="TOPF">
+	                <form>
+	                    <select ng-model="product.city" ng-options="city.value as city.key for city in cities">
+	                        <option value="">家居户型</option>
+	                        <option value="">两室两厅一卫一厨</option>
+	                        <option value="">两室两厅二卫一厨</option>
+	                        <option value="">三室两厅一卫一厨</option>
+	                        <option value="">三室两厅二卫一厨</option>
+	                        <option value="">四室两厅一卫一厨</option>
+	                        <option value="">四室两厅二卫一厨</option>
+	                    </select>
+	                    <input type="text" placeholder="居住小区">
+	                    <input type="text" placeholder="使用面积">
+	                    <p>平米</p>
+	                    <input type="text" placeholder="您的称呼">
+	                    <input type="text" placeholder="联系电话"><br>
+	                    <input type="button" class="MS" value="马上报价">
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+
+
+</section>
+<!-- 模板 -->
+<script type='text/template' id="template">
+	<li>
+		<div class="case_box">
+			<img src="<%=url%>" alt="">
+			<div>
+				<span class="case_s">1</span>
+				<a href=""><%=titlt%></a>
+				<p class="case_p1">
+					<span>咨询户数：</span>
+					<span><%=Znum%></span>
+					<span>签约户数：</span>
+					<span><%=Qnum%></span>
+				</p>
+				<p class="case_p2">
+					<span>小区地址：</span>
+					<span><%=address%></span>
+				</p>
+			</div>
+		</div>
+	</li>	
+</script>
+<script>
+ //模板
+ 	var box = $('#case_moban');
+ 	var templateStr = $('#template').html();
+ 	var compile = _.template(templateStr);
+ 	$.get('/pl',function(data){
+ 		console.log(data.data)
+ 		if (data.success) {
+ 			for (var i = 0; i < data.data.length; i++) {
+ 				var dictionary = data.data[i];
+ 				console.log(dictionary)
+ 				var str1 = compile(dictionary);
+ 				box.append(str1);
+ 			}
+ 		}
+ 	})
+    $('.nav_right_input').focus(function(){
+        $(this).val('')
+    })
+    $('.nav_right_input1').blur(function(){
+        $(this).val('您的称呼')
+    })
+    $('.nav_right_input2').blur(function(){
+        $(this).val('居住小区')
+    })
+    $('.nav_right_input3').blur(function(){
+        $(this).val('使用面积')
+    })
+    $('.nav_right_input4').blur(function(){
+        $(this).val('联系电话')
+    })
+    $('.nav_right_input5').blur(function(){
+        $(this).val('查找我的小区')
+    })
+</script>
+
+    <script>
+            window.onload = function(){
+
+                var btns = document.getElementById("btn").getElementsByTagName('button');
+                var divs = document.getElementById("divs").getElementsByTagName('div');
+                for(var i = 0;i < btns.length;i++){
+                    btns[i].wb = i;
+                    btns[i].onclick = function(){
+                        for(var j = 0;j < btns.length;j++){
+                            btns[j].className = "";
+                            divs[j].className = "";
+                            btns[j].style.color = "";
+                            btns[j].style.backgroundColor = "";
+                            btns[j].style.borderTop="";
+                        }
+                        btns[this.wb].style.color = "red";
+                        btns[this.wb].style.backgroundColor = "white";
+                        divs[this.wb].className = "show";
+                        btns[this.wb].style.borderTop= "2px solid red";
+                    }
+                }
+            }
+    </script>

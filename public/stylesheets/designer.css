@@ -1,0 +1,18 @@
+body,html{
+    font-family:"宋体";
+}
+.box{
+    width: 1200px;
+    height: 1500px;
+    border:1px solid blue;
+    margin:15px auto;
+}
+.box .TOP{
+    width: 878px;
+    height: 110px;
+    border:2px solid #dddddd;
+}
+.box .TOP .TOPT{
+    width: 878px;
+
+}

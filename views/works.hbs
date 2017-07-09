@@ -1,0 +1,234 @@
+<script src="./javascripts/underscore-min.js"></script>
+<script src="./javascripts/jquery-1.12.3.min.js"></script>
+<link rel="stylesheet" href="./stylesheets/reset.css">
+<link rel="stylesheet" href="./stylesheets/works.css">
+
+
+<img class="img1" src="./images/20160307050222952.jpg" alt="">
+<nav>
+    <div class="nav_left">
+        <a id="aq" href="">
+            龙发装饰简约北欧风格装修案例
+        </a>
+    </div>
+    <div class="nav_center">
+        <div>
+            <a id="text_2" href="">北京龙发装饰欧式风格装修案例</a>
+        </div>
+        <div>
+            <a id="text_3" href="">龙发装饰300平米别墅装修案例</a>
+        </div>
+        <div>
+            <a id="text_4" href="">绿地老街140平米装修案例</a>
+        </div>
+        <div>
+            <a id="text_5" href="">龙发装饰宇泰佳苑280平米装修案例</a>
+        </div>
+        <div>
+            <a id="text_6" href="">郑州龙发装饰案例</a>
+        </div>
+    </div>
+    <div class="nav_right">
+        <ul>
+            <li><a class="nav_right_a1" href="">龙发装饰300平米别墅装修案例</a></li>
+                <img  id="nav_right_a1_T1" src="./images/1-16092PZJ90-L.jpg" alt="">
+            <li><a class="nav_right_a2" href="">龙发装饰简约北欧风格装修案例</a></li>
+                <img style="display: none" id="nav_right_a1_T2" src="./images/1-16092ZT2510-L.jpg" alt="">
+            <li><a class="nav_right_a3" href="">绿地老街140平米装修案例</a></li>
+                <img style="display: none" id="nav_right_a1_T3" src="./images/1-160R0095AVU.jpg" alt="">
+            <li><a class="nav_right_a4" href="">北京龙发装饰欧式风格装修案例</a></li>
+                <img style="display: none" id="nav_right_a1_T4" src="./images/1-1611250U6140-L.jpg" alt="">
+            <li><a class="nav_right_a5" href="">郑州龙发装饰案例</a></li>
+                <img style="display: none" id="nav_right_a1_T5" src="./images/1-161122115S90-L.jpg" alt="">
+            <li><a class="nav_right_a6" href="">龙发装饰宇泰佳苑280平米装修案例</a></li>
+                <img style="display: none" id="nav_right_a1_T6" src="./images/1-160Z50Z0400-L.jpg" alt="">
+        </ul>
+    </div>
+</nav>
+<section class="list">
+    <ul>
+        <li>
+            <a href="">风格：</a>
+            <a href="">地中海</a>
+            <span>|</span>
+            <a href="">简约</a>
+            <span>|</span>
+            <a href="">北欧</a>
+            <span>|</span>
+            <a href="">新古典</a>
+            <span>|</span>
+            <a href="">欧式</a>
+            <span>|</span>
+            <a href="">中式</a>
+            <span>|</span>
+            <a href="">混搭</a>
+            <span>|</span>
+            <a href="">美式</a>
+        </li>
+        <li>
+            <a href="">户型：</a>
+            <a href="">二居室</a>
+            <a href="">三居室</a>
+            <a href="">四居室</a>
+            <a href="">大户型</a>
+            <a href="">复型</a>
+            <a href="">别墅</a>
+        </li>
+        <li>
+            <a href="">面积：</a>
+            <a href="">100平以下</a>
+            <a href="">100-150平</a>
+            <a href="">150-200平</a>
+            <a href="">200平以上</a>
+
+        </li>
+        <li>
+            <a href="">造价：</a>
+            <a href="">10万以下</a>
+            <a href="">10-15万</a>
+            <a href="">15-30万</a>
+            <a href="">30-50万</a>
+            <a href="">50-100万</a>
+            <a href="">100万以上</a>
+        </li>
+        <li>
+            <a href="">空间：</a>
+            <a href="">客厅</a>
+            <a href="">卧室</a>
+            <a href="">餐厅</a>
+            <a href="">厨房</a>
+            <a href="">书房</a>
+            <a href="">阳台</a>
+            <a href="">卫生间</a>
+            <a href="">儿童房</a>
+        </li>
+        <li>
+            <a href="">局部：</a>
+            <a href="">吊顶</a>
+            <a href="">隔断</a>
+            <a href="">窗帘</a>
+            <a href="">飘窗</a>
+            <a href="">橱柜</a>
+            <a href="">阁楼</a>
+            <a href="">背景墙</a>
+            <a href="">榻榻米</a>
+            <a href="">吧台</a>
+            <a href="">酒柜</a>
+            <a href="">鞋柜</a>
+            <a href="">衣柜</a>
+            <a href="">隐形门</a>
+            <a href="">博古架</a>
+            <a href="">书柜</a>
+        </li>
+    </ul>
+
+</section>
+<div class="black">
+    <span></span>
+    <span>全部作品</span>
+</div>
+
+<div class="tem">
+    <ul id="box" class="box">
+        
+    </ul>
+</div>
+<script type="text/template" id="template">
+    <li>
+        <img src="<%=url%>" alt="">
+        <p><%=biaoti%></p>
+        <div>
+            <span><%=constructor%></span>
+            <span><%=com%></span>
+            <span>/</span>
+            <span><%=city%></span>
+        </div>
+        <p>
+            <a href=""><%=happy%></a>
+        </p>
+    </li>
+</script>
+<script>
+    // 模板
+   var box = $('#box');
+   var templateStr = $('#template').html();
+   var compile = _.template(templateStr);
+    $.get('/w',function(data){
+        console.log(data)
+        if(data.success){
+            for (var i = 0; i < data.data.length; i++) {
+                var dictionary = data.data[i]
+                console.log(dictionary)
+                var str1 = compile(dictionary);
+                box.append(str1);
+            }
+        }
+    })
+
+
+
+    $('.nav_right_a1').mouseover(function(){
+        $('#nav_right_a1_T1').css("display","block")
+                .siblings('img').css("display","none")
+    })
+    $('.nav_right_a2').mouseover(function(){
+      $('#nav_right_a1_T2').css("display","block")
+              .siblings('img').css("display","none")
+    })
+    $('.nav_right_a3').mouseover(function(){
+        $('#nav_right_a1_T3').css("display","block")
+                .siblings('img').css("display","none")
+    })
+    $('.nav_right_a4').mouseover(function(){
+        $('#nav_right_a1_T4').css("display","block")
+                .siblings('img').css("display","none")
+    })
+    $('.nav_right_a5').mouseover(function(){
+        $('#nav_right_a1_T5').css("display","block")
+                .siblings('img').css("display","none")
+    })
+    $('.nav_right_a6').mouseover(function(){
+        $('#nav_right_a1_T6').css("display","block")
+                .siblings('img').css("display","none")
+    })
+
+    $('#aq').mouseover(function(){
+        $(this).css('background','#ea5953')
+    })
+    $('#aq').mouseleave(function(){
+        $(this).css('background','#444')
+    })
+    $('#text_2').mouseover(function(){
+        $(this).css('background','#ea5953')
+    })
+    $('#text_2').mouseleave(function(){
+        $(this).css('background','#444')
+    })
+    $('#text_3').mouseover(function(){
+        $(this).css('background','#ea5953')
+    })
+    $('#text_3').mouseleave(function(){
+        $(this).css('background','#444')
+    })
+    $('#text_4').mouseover(function(){
+        $(this).css('background','#ea5953')
+    })
+    $('#text_4').mouseleave(function(){
+        $(this).css('background','#444')
+    })
+    $('#text_5').mouseover(function(){
+        $(this).css('background','#ea5953')
+    })
+    $('#text_5').mouseleave(function(){
+        $(this).css('background','#444')
+    })
+    $('#text_6').mouseover(function(){
+        $(this).css('background','#ea5953')
+    })
+    $('#text_6').mouseleave(function(){
+        $(this).css('background','#444')
+    })
+
+
+
+</script>

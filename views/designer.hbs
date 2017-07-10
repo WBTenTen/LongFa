@@ -1,8 +1,174 @@
 <link rel="stylesheet" href="../stylesheets/designer.css">
-<img src="/images/banner_sjs.jpg" alt="">
+<img src="/images/banner_sjs.jpg" style="width: 1900px;" alt="">
 <div class="box">
     <div class="TOP">
-        <div class="TOPT"></div>
-        <div class="TOPB"></div>
+        <div class="TOPT">
+            <ul>
+                <li><a href="">设计风格:</a></li>
+                <li><a href="">新古典</a></li>
+                <li><a href="">田园</a></li>
+                <li><a href="">简约</a></li>
+                <li><a href="">北欧</a></li>
+                <li><a href="">地中海</a></li>
+                <li><a href="">欧式</a></li>
+                <li><a href="">中式</a></li>
+                <li><a href="">混搭</a></li>
+                <li><a href="">美式</a></li>
+            </ul>
+        </div>
+        <div class="TOPT">
+            <ul>
+                <li><a href="">设计职级:</a></li>
+                <li><a href="">主任设计师</a></li>
+                <li><a href="">高级主任设计师</a></li>
+                <li><a href="">设计总监</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="BZTJ">
+        <span></span>
+        <strong>本周推荐</strong>
+    </div>
+    <div class="LUNBO">
+
+    </div>
+    <div class="DESC">
+        <ul class="BOX" id="BOX">
+
+        </ul>
+        <script type="text/template" id="template">
+            <li class="BIG">
+                <img src="<%=url%>" class="IMG">
+                <div class="BOXT">
+                    <a class="A"><%=name%></a>
+                    <img src="<%=tu%>" class="TU">
+                    <a class="ADD"><%=address%></a>
+                    <a class="ZAN"><span><%=zan%></span></a>
+                </div>
+                <div class="BOXC">
+                    <ul>
+                        <li><%=epre%></li>
+                        <li><%=zhiji%></li>
+                        <li><%=sty%></li>
+                        <li><%=pan%></li>
+                        <li><%=des%></li>
+                    </ul>
+                </div>
+            </li>
+        </script>
+        <script src="../javascripts/underscore-min.js"></script>
+        <script>
+            var box = $('#BOX');
+            var templateStr = $('#template').html();
+
+            var compile = _.template(templateStr);
+            console.log(compile);
+            $.get('/des',function(data){
+                console.log(data)
+                if(data.success){
+//                console.log('123');
+                    for (var i = 0; i < data.data.length; i++) {
+                        var dictionary = data.data[i];
+//                    console.log(dictionary);
+                        var str1 = compile(dictionary);
+                        box.append(str1);
+                    }
+                }
+            })
+        </script>
+    </div>
+    <div class="RIG">
+        <div class="GYL">
+            <img src="/images/logo2.png" alt="">
+            <span>关于龙发</span>
+        </div>
+        <div class="GLX">
+            <ul>
+                <li>
+                    <img src="/images/icon22.png">
+                    <a href="">龙发简介</a>
+                </li>
+                <li>
+                    <img src="/images/icon22.png">
+                    <a href="">联系龙发</a>
+                </li>
+                <li>
+                    <img src="/images/icon22.png">
+                    <a href="">龙发新闻</a>
+                </li>
+            </ul>
+        </div>
+        <div class="MFL">
+            <img src="/images/lanmuyeguanggao.jpg" alt="">
+        </div>
+        <div class="change">
+            <div class="top" id="btn">
+                <button class="current">龙发旗舰店<tton>
+                    <button class="current">龙发旗舰店<tton>
+            </div>
+            <div id="divs" class="bottom">
+                <div class="show">
+                    <img src="/images/hankou.jpg" width="242px" height="151px">
+                    <p>嵩山路</p>
+                </div>
+                <div class="hide">
+                    <img src="/images/wuchang.jpg">
+                    <p>未来路</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.onload = function(){
+                //拿到所有的按钮
+                var btns = document.getElementById("btn").getElementsByTagName('button');
+                var divs = document.getElementById("divs").getElementsByTagName('div');
+                for(var i = 0;i < btns.length;i++){
+//                divs[i].style.color = "red";
+                    btns[i].wb = i;
+                    btns[i].onclick = function(){
+                        //在事件里面不能使用i但是可以使用当前被点击按钮的自定义属性wb
+                        //排他思想
+                        for(var j = 0;j < btns.length;j++){
+                            btns[j].className = "";
+                            divs[j].className = "";
+                            btns[j].style.color = "";
+                            btns[j].style.backgroundColor = "";
+                            btns[j].style.borderTop="";
+                        }
+                        btns[this.wb].style.color = "red";
+                        btns[this.wb].style.backgroundColor = "white";
+                        divs[this.wb].className = "show";
+                        btns[this.wb].style.borderTop= "2px solid red";
+                    }
+                }
+            }
+
+        </script>
+        <div class="PHNE">
+            <p>电话：<b>0371-53363553</b></p>
+            <input type="button" value="发送地址至本机">
+        </div>
+        <div class="TOP">
+            <p><span></span>算算你家装修多少钱？</p>
+            <div class="TOPF">
+                <form>
+                    <select ng-model="product.city" ng-options="city.value as city.key for city in cities">
+                        <option value="">家居户型</option>
+                        <option value="">两室两厅一卫一厨</option>
+                        <option value="">两室两厅二卫一厨</option>
+                        <option value="">三室两厅一卫一厨</option>
+                        <option value="">三室两厅二卫一厨</option>
+                        <option value="">四室两厅一卫一厨</option>
+                        <option value="">四室两厅二卫一厨</option>
+                    </select>
+                    <input type="text" placeholder="居住小区">
+                    <input type="text" placeholder="使用面积">
+                    <p>平米</p>
+                    <input type="text" placeholder="您的称呼">
+                    <input type="text" placeholder="联系电话"><br>
+                    <input type="button" class="MS" value="马上报价">
+                </form>
+            </div>
+        </div>
     </div>
 </div>

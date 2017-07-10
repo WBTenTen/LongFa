@@ -1,11 +1,15 @@
 body,html{
     font-family:"宋体";
 }
+ul{
+    list-style-type:none;
+}
 .box{
     width: 1200px;
-    height: 1500px;
-    border:1px solid blue;
+    height: 2650px;
+    /*border:1px solid blue;*/
     margin:15px auto;
+    position: relative;
 }
 .box .TOP{
     width: 878px;
@@ -14,5 +18,301 @@ body,html{
 }
 .box .TOP .TOPT{
     width: 878px;
+    height:54px;
+    border-bottom:1px solid #dddddd;
+}
+.box .TOP .TOPT ul li{
+    float: left;
+    margin-left:20px;
+    font-size: 14px;
+    line-height:54px;
+}
+.box .TOP .TOPT ul li:nth-child(1){
+    width: 70px;
+    height: 30px;
+    background-color: #eeeeee;
+    line-height:30px;
+    margin-top:10px;
+    padding-left:5px;
+}
+.box .TOP .TOPT ul li:nth-child(2){
+    margin-left: 40px;
+}
+.box .TOP .TOPT ul li a:hover{
+    text-decoration: underline;
+}
+.box .RIG{
+    width: 300px;
+    height: 670px;
+    /*border:1px solid red;*/
+    position: absolute;
+    top:20px;
+    right: 3px;
+}
+.box .RIG .GYL{
+    height: 60px;
+    width: 300px;
+    background-color: #d20001;
+    border:1px solid #dddddd;
+}
+.box .RIG .GYL img{
+    position: absolute;
+    top:15px;
+    right: 10px;
+}
+.box .RIG .GYL span{
+    font-size: 30px;
+    color:#dddddd;
+    line-height: 60px;
+    font-weight: bold;
+    margin-left:10px;
+}
+.box .RIG .GLX{
+    width: 300px;
+    height: 120px;
+    border-top:0px;
+    border-left:1px solid #dddddd;
+    border-right:1px solid #dddddd;
+}
+.box .RIG .GLX ul li{
+    height: 40px;
+    line-height: 40px;
+    margin-left:10px;
+    border-bottom:1px solid #eeeeee;
+    font-family: 微软雅黑;
+}
+.box .RIG .GLX ul li:nth-child(1) a{
+    color: red;
+}
+.box .RIG .GLX ul li a{
+    margin-left:10px;
+}
+.box .RIG .GLX ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.box .RIG .MFL{
+    height: 120px;
+    margin-top: 15px;
+}
+.box .RIG .change{
+    width: 300px;
+    border:1px solid #d9d9d9;
+    border-bottom:0;
+    height:230px;
+    margin-top:20px;
+}
+.box .RIG .change .top button{
+    /*display: block;*/
+    width: 147px;
+    height: 40px;
+    /*border:1px solid #f2f2f2;*/
+    border:0;
+    outline: none;
+    font-size: 15px;
+    margin-left:2px;
+    background-color: #f2f2f2;
+}
+.box .RIG .change .bottom div{
+    width:100%;
+    height:150px;
+    display: none;
+}
+.box .RIG .change .bottom .show{
+    display: block;
+}
+.box .RIG .change .bottom img{
+    margin-top:13px;
+    margin-left:25px;
+}
+.box .RIG .change .bottom p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.box .RIG .PHNE{
+    width: 300px;
+    height: 90px;
+    border:1px solid #dddddd;
+    border-top:0px;
+    text-align: center;
+    margin-top:-8px;
+}
+.box .RIG .PHNE p,.box .RIG .PHNE input{
+    margin-top:10px;
+}
+.box .RIG .PHNE p b{
+    color: red;
+}
+.box .RIG .PHNE input{
+    width: 230px;
+    height: 40px;
+    background-color: #59db9a;
+    border:0;
+    outline:none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.box .RIG .PHNE input:hover{
+    background-color: #05a354;
+    cursor: pointer;
+}
+.box .RIG .TOP{
+    width: 300px;
+    height: 350px;
+    border:1px solid #dddddd;
+    border-top:2px solid red;
+    margin-top:20px;
+    position: relative;
+}
+.box .RIG .TOP p{
+    margin-top:15px;
+    margin-left:30px;
+    line-height:25px;
+    font-size: 16px;
+}
+.box .RIG .TOP p span{
+    display: block;
+    width: 19px;
+    height: 25px;
+    margin-right:10px;
+    background: url("../images/icon_jsq.png");
+    float: left;
+}
+.box .RIG .TOP .TOPF form select,.box .RIG .TOP .TOPF input{
+    width: 250px;
+    height: 33px;
+    margin-top:13px;
+    margin-left:15px;
+    font-size:15px;
+    text-indent: 1em;
+}
+.box .RIG .TOP .TOPF form select{
+    outline:0;
+}
+.box .RIG .TOP .TOPF form p{
+    position: absolute;
+    top:139px;
+    right: 60px;
+    font-size: 10px;
+}
+.box .RIG .TOP .TOPF form input.MS{
+    border:0;
+    background-color: #ff5050;
+    color: white;
+    width: 255px;
+    outline:0;
+}
+.box .RIG .TOP .TOPF form input:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+
+.box .BZTJ{
+    margin-top:20px;
+    height: 40px;
+    width: 878px;
+    line-height: 40px;
+    background-color: #eeeeee;
+}
+.box .BZTJ span{
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    background-color: #ff5050;
+    float: left;
+    margin-right:10px;
+}
+.box .BZTJ strong{
+    font-size: 20px;
+}
+.box .LUNBO{
+    margin-top:10px;
+    width: 878px;
+    height: 200px;
+    border:1px solid #dddddd;
+}
+.box .DESC{
+    margin-top:2px;
+    width: 878px;
+    height: 2245px;
+    /*border:1px solid red;*/
+}
+.box .DESC .BOX .BIG{
+    width: 878px;
+    height: 200px;
+    border:1px solid #dddddd;
+    margin-top:20px;
+}
+.box .DESC .BOX li .tu{
+    display: block;
+}
+.box .DESC .BOX li img.IMG{
+    float: left;
+    border-radius:50%;
+    width: 170px;
+    height: 170px;
+    margin-top:15px;
+}
+.box .DESC .BOX li .BOXT{
+    float: left;
+    width: 500px;
+    height: 40px;
+    /*border:1px solid red;*/
+    margin-left:20px;
+    margin-top:12px;
+}
+.box .DESC .BOX li .BOXT .A{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:10px;
+    color: #000;
+}
+.box .DESC .BOX li .BOXT .A:hover{
+    color: red;
+    cursor: pointer;
+}
+.box .DESC .BOX li .BOXT .TU{
+    float: left;
+    margin-top:10px;
+    margin-left:25px;
+}
+.box .DESC .BOX li .BOXT .ADD{
+    float: left;
+    margin-top:10px;
+    margin-left:5px;
+}
+.box .DESC .BOX li .BOXT .ZAN{
+    display: inline-block;
+    margin-left:120px;
+    margin-top:10px;
+    background: url("/images/icon_love.png") no-repeat -14px -764px;
+}
+.box .DESC .BOX li .BOXT .ZAN span{
+    margin-left:25px;
+    line-height:20px;
+    display: inline-block;
+    color: red;
+}
+.box .DESC .BOX li .BOXC{
+    float: left;
+    width: 658px;
+    height: 140px;
+    /*border:1px solid red;*/
+    margin-top: 5px;
+    font-size: 13px;
+    margin-left:20px;
 
 }
+.box .DESC .BOX li .BOXC ul li{
+    line-height: 24px;
+}
+.box .DESC .BOX li .BOXT .ZAN:hover span{
+    text-decoration: underline;
+}
+.box .DESC .BOX li .BOXT .ZAN:hover{
+    background: url("/images/icon_love.png") no-repeat -14px -724px;
+}
+
+
